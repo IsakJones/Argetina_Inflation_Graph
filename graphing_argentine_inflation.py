@@ -60,7 +60,7 @@ class InflationProject(object):
         plt.rcParams["font.sans-serif"] = "Arial"
         plt.rcParams["legend.markerscale"] = 8
     
-    def short_way_to_inflation(self):
+    def scraper(self):
     
         driver = webdriver.Chrome(self.driverpath)
         driver.get(self.website)
@@ -183,7 +183,7 @@ class InflationProject(object):
         return df_inflation
     
     def full_package(self):
-        self.short_way_to_inflation()
+        self.scraper()
         self.comparative_inflation()
 
 
